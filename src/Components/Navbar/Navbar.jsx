@@ -71,7 +71,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <a className="btn">Contact</a>
+            <a className="bg-transparent hover:bg-[#48b9ee] text-[#4cbcf0] font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Contact</a>
           </motion.div>
        
       </div>
