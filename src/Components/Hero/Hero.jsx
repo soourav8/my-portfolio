@@ -14,7 +14,7 @@ const Hero = () => {
     loop: {},
   });
   return (
-    <div style={{ height: "90vh" }} className="ml-6 md:ml-8 flex justify-between">
+    <div style={{ height: "90vh" }} className="ml-6 md:ml-8 md:flex justify-between">
       <div className="mt-4 md:mt-[8rem]">
         <p className="text-[#6BC7F1]">Hi, my name is,</p>
         <h1 className="text-3xl md:text-7xl   md:font-normal md:leading-normal">
@@ -25,7 +25,7 @@ const Hero = () => {
         </h2>
       </div>
 
-      <div className="box mt-4 md:mt-[8rem]">
+      <div className="box mt-8 md:mt-[8rem] h-[20rem] md:h-[25rem] w-[20rem] md:w-[25rem]" >
         
       </div>
     </div>
