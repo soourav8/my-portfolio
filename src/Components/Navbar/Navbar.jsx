@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {motion} from "framer-motion";
+
+import { motion } from "framer-motion";
+import { HashLink } from 'react-router-hash-link';
+
 
 const Navbar = () => {
   return (
-    <div  className="">
-      <div className="navbar bg-base-100">
+    <div className="">
+      <nav className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -24,57 +26,62 @@ const Navbar = () => {
                 />
               </svg>
             </label>
+            
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  "
             >
-              <li className="">
-                <Link to="/">Home</Link>
+              <li>
+                <HashLink smooth to="/#about">About</HashLink>
               </li>
 
               <li>
-                <Link to="#">About</Link>
+                <HashLink smooth to="/#skills">Skills</HashLink>
+              </li>
+
+              
+
+              <li>
+                <HashLink smooth to="/#projects">Projects</HashLink>
               </li>
             </ul>
+            
           </div>
           <a className="btn btn-ghost normal-case text-2xl text-[#6BC7F1] font-signature mt-4">
             SouravSardar
           </a>
         </div>
 
-        
-          <motion.div 
+        <motion.div
           className="navbar-end"
           animate={{
-            y:"1rem"
+            y: "1rem",
           }}
           transition={{
             type: "spring",
-            stiffness: 700
-            
+            stiffness: 700,
           }}
-          >
-            <div className="navbar-end hidden lg:flex ">
-              <ul className="menu menu-horizontal px-1 ">
-                
+        >
+          <div className="navbar-end hidden lg:flex ">
+            <ul className="menu menu-horizontal px-1 ">
+              <li>
+                <HashLink smooth to="/#about">About</HashLink>
+              </li>
 
-                <li>
-                  <a>About</a>
-                </li>
+              <li>
+                <HashLink smooth to="/#skills">Skills</HashLink>
+              </li>
 
-                <li>
-                  <a>Skills</a>
-                </li>
-
-                <li>
-                  <a>Projects</a>
-                </li>
-              </ul>
-            </div>
-            <a className="bg-transparent hover:bg-[#48b9ee] text-[#4cbcf0] font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Contact</a>
-          </motion.div>
-       
-      </div>
+              <li>
+                <HashLink smooth to="/#projects">Projects</HashLink>
+              </li>
+            </ul>
+          </div>
+          <HashLink smooth to="/#contact" className="bg-transparent hover:bg-[#48b9ee] text-[#4cbcf0] font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            Contact
+          </HashLink>
+        </motion.div>
+      </nav>
     </div>
   );
 };
